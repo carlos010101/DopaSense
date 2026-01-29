@@ -16,10 +16,7 @@ struct DopaSenseApp: App {
         WindowGroup {
             if !onboardingCompleted {
                 LaunchTransitionView {
-                    OnboardingView()
-                        .onAppear {
-                            // Futuro: Lógica para completar onboarding
-                        }
+                    IntroView()
                 }
             } else {
                 AppTabView()
