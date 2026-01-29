@@ -15,12 +15,14 @@ struct DopaSenseApp: App {
     var body: some Scene {
         WindowGroup {
             if !onboardingCompleted {
-                OnboardingView()
-                    .onAppear {
-                        // Futuro: Lógica para completar onboarding
-                    }
+                LaunchTransitionView {
+                    IntroView()
+                }
             } else {
                 AppTabView()
+                    .onAppear {
+                        onboardingCompleted = false
+                    }
             }
         }
     }

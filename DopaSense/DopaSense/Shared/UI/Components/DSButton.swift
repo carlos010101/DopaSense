@@ -14,7 +14,7 @@ struct DSButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(.body, design: .rounded).weight(.semibold))
+                .font(.system(size: 19, weight: .semibold))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
